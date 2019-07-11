@@ -3288,7 +3288,7 @@ if (version[0] <= 2 && version[1] < 17 || version[0] >= 3) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\MYCOM\ecommerce\resources\js\bootstrap-datetimepicker.js */"./resources/js/bootstrap-datetimepicker.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\ecommerce\resources\js\bootstrap-datetimepicker.js */"./resources/js/bootstrap-datetimepicker.js");
 
 
 /***/ })

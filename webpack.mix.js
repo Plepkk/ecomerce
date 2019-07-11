@@ -16,8 +16,8 @@ mix.disableNotifications();
 if (mix.inProduction()) { // npm run production
    mix.js('resources/js/bootstrap.js', 'public/js/bootstrap.min.js')
       .js('resources/js/app.js', 'public/js/app.min.js')
-      //.js('resources/js/admin.js', 'public/js/admin.min.js')
-      //.js('resources/js/user.js', 'public/js/user.min.js')
+    //   .js('resources/js/admin.js', 'public/js/admin.min.js')
+    //   .js('resources/js/user.js', 'public/js/user.min.js')
       .js('resources/js/pace.js', 'public/js/pace.min.js')
       .js('node_modules/jquery/src/jquery.js', 'public/js/jquery.min.js')
       .js('node_modules/popper.js/dist/popper.js', 'public/js/popper.min.js')
@@ -33,7 +33,7 @@ if (mix.inProduction()) { // npm run production
       .sass('node_modules/@sweetalert2/themes/default/default.scss', 'public/css/sweetalert2.min.css')
       .sass('node_modules/toastr/toastr.scss', 'public/css/toastr.min.css')
       .sass('resources/sass/bootstrap-datetimepicker.scss', 'public/css/bootstrap-datetimepicker.min.css');
-   
+
    mix.scripts(['node_modules/moment/moment.js', 'node_modules/moment/locale/th.js'], 'public/js/moment.min.js');
 
    mix.styles('node_modules/pace-progress/themes/blue/pace-theme-minimal.css', 'public/css/pace.min.css')
@@ -44,8 +44,8 @@ if (mix.inProduction()) { // npm run production
 else { // npm run development
    mix.js('resources/js/bootstrap.js', 'public/js')
       .js('resources/js/app.js', 'public/js')
-      //.js('resources/js/admin.js', 'public/js')
-      //.js('resources/js/user.js', 'public/js')
+      // .js('resources/js/admin.js', 'public/js')
+      // .js('resources/js/user.js', 'public/js')
       .js('resources/js/pace.js', 'public/js')
       .js('node_modules/jquery/src/jquery.js', 'public/js')
       .js('node_modules/popper.js/dist/popper.js', 'public/js')

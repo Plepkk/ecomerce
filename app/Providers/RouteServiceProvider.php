@@ -39,11 +39,11 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
+        //
         $this->mapAdminRoutes();
-
     }
 
-     /**
+    /**
      * Define the "web" routes for the application.
      *
      * These routes all receive session state, CSRF protection, etc.
@@ -57,8 +57,8 @@ class RouteServiceProvider extends ServiceProvider
              ->group(base_path('routes/web.php'));
     }
 
-    /**
-     * Define the "Admin" routes for the application.
+        /**
+     * Define the "admin" routes for the application.
      *
      * These routes all receive session state, CSRF protection, etc.
      *
@@ -71,7 +71,6 @@ class RouteServiceProvider extends ServiceProvider
              ->namespace('App\Http\Controllers\Admin')
              ->group(base_path('routes/admin.php'));
     }
-
 
     /**
      * Define the "api" routes for the application.

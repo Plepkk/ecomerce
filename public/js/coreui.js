@@ -14740,7 +14740,7 @@ module.exports = g;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\MYCOM\ecommerce\node_modules\@coreui\coreui\dist\js\coreui.js */"./node_modules/@coreui/coreui/dist/js/coreui.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\ecommerce\node_modules\@coreui\coreui\dist\js\coreui.js */"./node_modules/@coreui/coreui/dist/js/coreui.js");
 
 
 /***/ })

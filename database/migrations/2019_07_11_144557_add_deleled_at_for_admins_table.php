@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddRoleIdForAdminsTable extends Migration
+class AddDeleledAtForAdminsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,10 +14,10 @@ class AddRoleIdForAdminsTable extends Migration
     public function up()
     {
         Schema::table('admins', function (Blueprint $table) {
-            $table->unsignedBigInteger('role_id')->after('id');
-            $table->foreign('role_id')
-                ->references('id')->on('roles')
-                ->onDelete('cascade'); /*เป็นการ migrate เข้าไปเรื่อยๆ*/
+            $table->softDeletes();
+        });
+        Schema::table('users', function (Blueprint $table) {
+            $table->softDeletes();
         });
     }
 
@@ -28,8 +28,11 @@ class AddRoleIdForAdminsTable extends Migration
      */
     public function down()
     {
-        Schema::table('admins', function (Blueprint $table) {           
-            $table->dropForeign(['role_id']);   
+        Schema::table('admins', function (Blueprint $table) {
+            $table->dropForeign(['deleted_at']);
+        });
+        Schema::table('admins', function (Blueprint $table) {
+            $table->dropForeign(['deleted_at']);
         });
     }
 }

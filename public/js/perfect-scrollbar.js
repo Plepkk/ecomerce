@@ -1427,7 +1427,7 @@ return PerfectScrollbar;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\MYCOM\ecommerce\node_modules\perfect-scrollbar\dist\perfect-scrollbar.js */"./node_modules/perfect-scrollbar/dist/perfect-scrollbar.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\ecommerce\node_modules\perfect-scrollbar\dist\perfect-scrollbar.js */"./node_modules/perfect-scrollbar/dist/perfect-scrollbar.js");
 
 
 /***/ })

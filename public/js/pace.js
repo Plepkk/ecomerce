@@ -1232,7 +1232,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { if (typeof Symbol === 
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\MYCOM\ecommerce\resources\js\pace.js */"./resources/js/pace.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\ecommerce\resources\js\pace.js */"./resources/js/pace.js");
 
 
 /***/ })

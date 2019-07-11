@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-!(function webpackMissingModule() { var e = new Error("Cannot find module 'C:\\Users\\MYCOM\\ecommerce\\resources\\js\\user.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module 'C:\\xampp\\htdocs\\ecommerce\\resources\\js\\user.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 
 
 /***/ })

@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('/', 'HomeController')->only(['index'])->names([
+    'index' => 'web.home.index'
+]);
 
 Auth::routes();
 

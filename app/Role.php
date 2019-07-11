@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Role extends Model
 {
-      /**
+        /**
      * The attributes that are mass assignable.
      *
      * @var array
@@ -14,5 +14,4 @@ class Role extends Model
     protected $fillable = [
         'name'
     ];
-
 }

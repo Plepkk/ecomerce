@@ -3,9 +3,8 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-
+use Validator;
 use App\Admin;
-use Illuminate\Support\Facades\Validator;
 
 class SecretCommand extends Command
 {
@@ -14,14 +13,14 @@ class SecretCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'make:secret {email : email for authentications}';
+    protected $signature = 'make:secret {email : email for authentication}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create Secret Admin ';
+    protected $description = 'Create a Secret Administrators';
 
     /**
      * Create a new command instance.
@@ -40,15 +39,12 @@ class SecretCommand extends Command
      */
     public function handle()
     {
-        //$this->info('Display this on the screen');
-        //$this->error('Something went wrong!');
-        //$this->line('Display this on the screen');
-
         if (Admin::where('role_id', 1)->count() == 0) {
             $email = $this->argument('email');
             $name = $this->ask('Name');
             $password = $this->secret('Password');
             $password_confirmation = $this->secret('Confirm password');
+
             if ($this->confirm('Do you wish to continue?')) {
                 $validator = Validator::make([
                     'email' => $email,
@@ -62,7 +58,7 @@ class SecretCommand extends Command
                 ]);
                 if ($validator->fails()) {
                     $this->info('Secret administrator not created. See error messages below:');
-                
+
                     foreach ($validator->errors()->all() as $error) {
                         $this->error($error);
                     }
@@ -72,14 +68,14 @@ class SecretCommand extends Command
                         'role_id' => 1,
                         'email' => $email,
                         'name' => $name,
-                        'password' => $password
+                        'password' => $password,
+                        // 'email_verified_at' => \Carbon\Carbon::now(),
                     ]);
                     $this->info('Secret administrator created successfully.');
                 }
             }
-        }
-        else{
-            $this->error('Yes Already have admin');
+        } else {
+            $this->error('You already heve secret admin.');
         }
     }
 }

@@ -3,10 +3,11 @@
 namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
-
+use Illuminate\Database\Eloquent\SoftDeletes;
 class Admin extends Authenticatable
 {
-     /**
+    use SoftDeletes;
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
@@ -24,7 +25,7 @@ class Admin extends Authenticatable
         'password', 'remember_token',
     ];
 
-       /**
+    /**
      * Set the user's password.
      *
      * @param  string  $value
@@ -33,5 +34,4 @@ class Admin extends Authenticatable
     public function setPasswordAttribute($value) {
         $this->attributes['password'] = bcrypt($value);
     }
-
 }
